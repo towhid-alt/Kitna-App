@@ -1,0 +1,7 @@
+###Translations
+GET https://interroad-nontragical-odessa.ngrok-free.dev/api/results
+Content-Type: application/json
+
+{
+    "numberWord": "adhtis"
+}
