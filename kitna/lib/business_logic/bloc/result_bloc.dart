@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
@@ -25,7 +26,8 @@ class ResultBloc extends Bloc<ResultEvent, ResultState> {
       body: jsonEncode({
         'numberWord': event.word
       }));*/
-      final response = await http.get(Uri.parse('https://interroad-nontragical-odessa.ngrok-free.dev/api/results?numberWord=${number}'));
+      final apiUrl = dotenv.env['SERVER_URL'];
+      final response = await http.get(Uri.parse('$apiUrl/api/results?numberWord=${number}'));
 
       if(response.statusCode == 200){
         final data = jsonDecode(response.body);

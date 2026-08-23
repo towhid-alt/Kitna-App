@@ -18,7 +18,9 @@ class AppRouter {
       return MaterialPageRoute(builder: (_) => HomeScreen(selectedLang: selectedLanguage,));
       
       case '/result':
-      return MaterialPageRoute(builder: (_) => ResultScreen());
+      final args = settings.arguments as Map<String, dynamic>;
+      final word = args['userWord'];
+      return MaterialPageRoute(builder: (_) => ResultScreen(userWord: word,));
       
       default:
         return MaterialPageRoute(
