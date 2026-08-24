@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(providers: [
       BlocProvider<ResultBloc>(create: (context) => ResultBloc(),)
     ], child: MaterialApp(
-      title: 'Kitna?',
+      title: 'Kitna?!',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: _appRouter.onGenerateRoute,
       initialRoute: '/',

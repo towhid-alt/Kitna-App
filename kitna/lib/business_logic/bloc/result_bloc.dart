@@ -18,17 +18,11 @@ class ResultBloc extends Bloc<ResultEvent, ResultState> {
     Emitter<ResultState> emit,
   ) async {
     emit(ResultLoading());
-    print('📛Inside ResultRequested event handler function');
     try {
-      final number = event.word;/*
-      final response = await http.post(Uri.parse('https://interroad-nontragical-odessa.ngrok-free.dev/api/results'),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({
-        'numberWord': event.word
-      }));*/
+      final number = event.word;
+      final language = event.language;
       final apiUrl = dotenv.env['SERVER_URL'];
-      final response = await http.get(Uri.parse('$apiUrl/api/results?numberWord=${number}'));
-
+      final response = await http.get(Uri.parse('$apiUrl/api/results?numberWord=${number}&language=${language}'));
       if(response.statusCode == 200){
         final data = jsonDecode(response.body);
         final results = List<Map<String, dynamic>>.from(data);

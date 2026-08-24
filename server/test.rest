@@ -1,7 +1,11 @@
 ###Translations
-GET https://interroad-nontragical-odessa.ngrok-free.dev/api/results
+POST https://interroad-nontragical-odessa.ngrok-free.dev/api/results
 Content-Type: application/json
 
 {
-    "numberWord": "adhtis"
+    "numberWord": "adhtis",
+    "language": "Hindi"
 }
+
+###DATA IN URL
+GET  https://interroad-nontragical-odessa.ngrok-free.dev/api/results?numberWord=untess&language=Hindi
