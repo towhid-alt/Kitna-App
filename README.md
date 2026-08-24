@@ -1,4 +1,4 @@
-# Kitna
+# Kitna?!
 
 A Flutter app that helps users understand number amounts they hear from shopkeepers. It converts Hindi number words (e.g., "adtees" → 38) into English numerals, helping users quickly understand Hindi numbers they may hear from local shopkeepers in India.
 
@@ -6,13 +6,11 @@ A Flutter app that helps users understand number amounts they hear from shopkeep
 
 
 
-![Home Screen](screenshots/home.png)
-
-
-![Translate Screen](screenshots/translate.png)
-
-
-![Result Screen](screenshots/result.png)
+<p align="center">
+  <img src="screenshots/home.png" width="150">
+  <img src="screenshots/translate.png" width="150">
+  <img src="screenshots/result.png" width="150">
+</p>
 
 ## 🎥 Demo
 
