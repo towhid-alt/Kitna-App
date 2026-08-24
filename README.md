@@ -7,14 +7,16 @@ A Flutter app that helps users understand number amounts they hear from shopkeep
 
 
 <p align="center">
-  <img src="screenshots/home.png" width="150">
-  <img src="screenshots/translate.png" width="150">
-  <img src="screenshots/result.png" width="150">
+  <img src="screenshots/home.png" width="200">
+  <img src="screenshots/translate.png" width="200">
+  <img src="screenshots/result.png" width="200">
 </p>
 
 ## 🎥 Demo
 
-![App Demo](screenshots/demo.gif)
+<p align="center">
+  <img src="screenshots/demo.gif" width="200">
+</p>
 
 ## ✨ Features
 
