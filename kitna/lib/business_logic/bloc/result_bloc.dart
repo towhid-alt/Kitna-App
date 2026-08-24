@@ -26,7 +26,7 @@ class ResultBloc extends Bloc<ResultEvent, ResultState> {
       if(response.statusCode == 200){
         final data = jsonDecode(response.body);
         final results = List<Map<String, dynamic>>.from(data);
-        emit(ResultFetched(translations: results));//FIXME:List<Map<String, dynamic>>.from(data)
+        emit(ResultFetched(translations: results));
       }
     } catch (error) {
       print('Error fetching results: $error');

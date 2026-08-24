@@ -61,6 +61,10 @@ function translateNumber(numberWord, language) {
     return matches
 }
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.get('/api/results', async (req, res) => {
     try {
         const { numberWord, language } = req.query;
