@@ -3,9 +3,10 @@ require('dotenv').config()
 const numbers = require('./parsersLib/parser_HI')
 const numbers_BEN = require('./parsersLib/parser_BEN')
 
-app.use(cors());
+
 const PORT = process.env.PORT || 3000;
 const app = express()
+app.use(cors());
 app.use(express.json())
 
 app.listen(PORT, () => console.log(`Server has started at port: ${PORT}`))
