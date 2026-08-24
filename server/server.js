@@ -2,6 +2,7 @@ const express = require('express')
 require('dotenv').config()
 const numbers = require('./parsersLib/parser_HI')
 const numbers_BEN = require('./parsersLib/parser_BEN')
+const cors = require('cors')
 
 
 const PORT = process.env.PORT || 3000;
