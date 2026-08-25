@@ -32,4 +32,9 @@ A Flutter app that helps users understand number amounts they hear from shopkeep
 - Dart
 - Node.js
 - Express.js
+- 
+### 📦 Download
+
+**APK Download:** [app-release.apk](https://github.com/yourusername/yourapp/releases/download/v1.0.0/app-release.apk)
+
 
