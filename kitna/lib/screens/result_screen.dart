@@ -23,6 +23,7 @@ class _ResultScreenState extends State<ResultScreen> {
         if (state is ResultFetched) {
           results = state.translations;
         }
+                          final check = results.isEmpty;
 
         return Scaffold(
           backgroundColor: Color(0xFFFFC567),
@@ -31,7 +32,7 @@ class _ResultScreenState extends State<ResultScreen> {
             children: [
               const SizedBox(height: 70),
               Text(
-                'Pick the one which sounds similar to \'$word\'',
+                'Prefer the one which sounds similar to \'$word\'',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Cartoon',
@@ -59,7 +60,7 @@ class _ResultScreenState extends State<ResultScreen> {
                       ),
                     ],
                   ),
-                  child: ListView.separated(
+                  child: !check ? ListView.separated(
                     itemCount: results.length,
                     separatorBuilder: (context, index) => const Divider(
                       color: Colors.black,
@@ -86,6 +87,13 @@ class _ResultScreenState extends State<ResultScreen> {
                         ),
                       );
                     },
+                  ) : Center(
+                    child: const Text('No matches! Try changing the spelling a bit.', textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Cartoon',
+                      fontSize: 15,
+                      color: Colors.red,
+                    ),),
                   ),
                 ),
               ),
